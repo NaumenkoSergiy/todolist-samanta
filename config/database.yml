@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+  username: postgres
+  password: password
+
+development:
+  <<: *default
+  database: samanta-todolist_development
+
+test:
+  <<: *default
+  database: samanta-todolist_test
+
+production:
+  <<: *default
+  database: samanta-todolist_production
+  username: samanta-todolist
+  password: <%= ENV['SAMANTA-TODOLIST_DATABASE_PASSWORD'] %>

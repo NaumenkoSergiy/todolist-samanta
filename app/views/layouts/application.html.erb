@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app='Tasks'>
+<head>
+  <title>SamantaTodolist</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js' %>
+  <%= javascript_include_tag '//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular-resource.min.js' %>
+  <%= javascript_include_tag 'application' %>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+
+<%= yield %>
+
+</body>
+</html>
